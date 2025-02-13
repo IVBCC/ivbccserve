@@ -5,10 +5,10 @@ const formInscripcionCursoSchema = new mongoose.Schema({
     nombreCompleto: { type: String, required: true },
     correo: { type: String, required: true },
     telefono: {
-        type: Number, required: true, validate: {
+        type: String, required: true, validate: {
             validator: function (v) {
                 return /^\d{10,}$/.test(v);
-            },
+            },        
             message: "El número de teléfono debe tener al menos 10 dígitos",
         }
     },
