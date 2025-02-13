@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const asyncHandler = require("../servidor/middleware/asyHandler");
+const asyncHandler = require("./middleware/asyHandler.js");
 
 module.exports = asyncHandler(async () => {
   const connectionParams = {
