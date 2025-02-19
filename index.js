@@ -15,7 +15,11 @@ connection();
 
 // Middlewares
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin: "*", // Permite todas las peticiones
+  methods: ["GET", "POST"], // Métodos permitidos
+  allowedHeaders: ["Content-Type"]
+}));
 
 // Configuración Swagger
 const swaggerOptions = {
