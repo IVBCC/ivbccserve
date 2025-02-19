@@ -6,6 +6,7 @@ const swaggerJsdoc = require('swagger-jsdoc');
 const connection = require('./db');
 const formRoutes = require('./routes/formRoutes');
 const formInscripcionCursoRoutes = require('./routes/formInscripcionCursoRoutes');
+const excelRoutes = require("./routes/excel");
 
 const app = express();
 
@@ -40,6 +41,7 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 // Rutas
 app.use('/api/forms', formRoutes);
 app.use('/api/inscripcioncurso', formInscripcionCursoRoutes);
+app.use("/api/excel", excelRoutes);
 
 const port = process.env.PORT || 5000;
 app.listen(port, () => console.log(`Servidor escuchando en el puerto ${port}...`));
