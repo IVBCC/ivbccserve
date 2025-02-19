@@ -1,5 +1,5 @@
 const { GoogleSpreadsheet } = require("google-spreadsheet");
-const creds = require("../client_secret_282490132482-e7qppfos6o54r7ebnt4q0lk5cedd4jno.apps.googleusercontent.com.json"); // Archivo JSON de credenciales
+const creds = require("../credencial.json"); // Archivo JSON de credenciales
 
 const SHEET_ID = "16A-6LkQqohsd6id14BEHHVn5f6fSksM89dJBUPrtnxA"; // Reemplázalo con tu ID de Google Sheets
 
