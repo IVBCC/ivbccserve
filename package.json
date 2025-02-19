@@ -17,6 +17,7 @@
     "express": "^4.19.2",
     "express-async-handler": "^1.2.0",
     "fs": "^0.0.1-security",
+    "google-spreadsheet": "^4.1.4",
     "mongoose": "^8.5.4",
     "swagger-jsdoc": "^6.2.8",
     "swagger-ui-express": "^5.0.1",
