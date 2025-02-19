@@ -8,7 +8,4 @@ const formSchema = new mongoose.Schema({
   ministerio: { type: String, required: true },
 });
 
-// Verifica si el modelo ya está compilado antes de crearlo
-const Form = mongoose.models.Form || mongoose.model("Form", formSchema);
-
-module.exports = Form;
+module.exports = mongoose.model('Form', formSchema);
