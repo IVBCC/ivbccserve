@@ -26,7 +26,8 @@ const swaggerOptions = {
     },
     servers: [
       {
-        url: 'IVBCC',
+        // url: 'http://localhost:5000',
+        url: 'https://ivbccserve.vercel.app/',
       },
     ],
   },
@@ -41,7 +42,10 @@ app.use('/api/forms', formRoutes);
 app.use('/api/inscripcioncurso', formInscripcionCursoRoutes);
 
 const port = process.env.PORT || 5000;
-app.listen(port, () => console.log(`Servidor escuchando en el puerto ${port}...`));
+app.listen(port, () => {
+  console.log(`Servidor escuchando en el puerto ${port}...`);
+  console.log("Swagger en http://localhost:5000/api-docs");
+});
 
 
 module.exports = app;
