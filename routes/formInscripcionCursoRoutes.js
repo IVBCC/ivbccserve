@@ -45,4 +45,6 @@ const FormInscripcionCursoController = require('../controllers/formInscripcionCu
  */
 router.post('/', FormInscripcionCursoController.createFormInscripcionCurso);
 
+router.get('/', FormInscripcionCursoController.getFormInscripcionCurso);
+
 module.exports = router;

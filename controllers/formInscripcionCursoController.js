@@ -14,3 +14,13 @@ exports.createFormInscripcionCurso = async (req, res) => {
         }
     }
 };
+
+exports.getFormInscripcionCurso = async (req,res) =>{
+    try{
+        const forminscripcionacurso = await FormInscripcionCurso.find();
+        res.status(200).json(forminscripcionacurso);
+    }catch (error){
+        console.error("Error al obtener formularios:", error);
+        res.status(500).json({ error: "Error del servidor al obtener formularios" });
+    }
+}
