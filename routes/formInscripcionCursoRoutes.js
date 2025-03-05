@@ -6,7 +6,7 @@ const FormInscripcionCursoController = require('../controllers/formInscripcionCu
  * @swagger
  * /api/inscripcioncurso:
  *   post:
- *     summary: Registrar un curso a usuario
+ *     summary: Registrar usuario a un curso
  *     tags: [Formularios]
  *     requestBody:
  *       required: true

@@ -6,7 +6,7 @@ const FormController = require('../controllers/formController');
  * @swagger
  * /api/forms:
  *   post:
- *     summary: Crear un nuevo miembro
+ *     summary: Registrar usuario a ministerio
  *     tags: [Formularios]
  *     requestBody:
  *       required: true
@@ -33,7 +33,7 @@ const FormController = require('../controllers/formController');
  *               ministerio: "Alabanza"
  *     responses:
  *       201:
- *         description: Miembro creado exitosamente
+ *         description: Inscripcion exitosa
  *       500:
  *         description: Error del servidor
  */
@@ -44,12 +44,12 @@ router.post('/', FormController.createForm);
  * @swagger
  * /api/forms:
  *   get:
- *     summary: Obtiene todos los miembros
+ *     summary: Obtiene todos los inscritos en el ministerio
  *     description: Obtiene una lista de todos los usuarios del formulario inscripcion a ministerio en el sistema.
  *     tags: [Formularios]
  *     responses:
  *       200:
- *         description: Miembro consultado exitosamente
+ *         description: Inscripcion consultada exitosamente
  *         content:
  *           application/json:
  *             schema:
