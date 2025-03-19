@@ -7,7 +7,7 @@ const FormController = require('../controllers/formController');
  * /api/forms:
  *   post:
  *     summary: Registrar usuario a ministerio
- *     tags: [Formularios]
+ *     tags: [Formulario ministerio]
  *     requestBody:
  *       required: true
  *       content:
@@ -46,7 +46,7 @@ router.post('/', FormController.createForm);
  *   get:
  *     summary: Obtiene todos los inscritos en el ministerio
  *     description: Obtiene una lista de todos los usuarios del formulario inscripcion a ministerio en el sistema.
- *     tags: [Formularios]
+ *     tags: [Formulario ministerio]
  *     responses:
  *       200:
  *         description: Inscripcion consultada exitosamente
