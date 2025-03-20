@@ -6,7 +6,7 @@ const swaggerJsdoc = require('swagger-jsdoc');
 const connection = require('./db');
 const formRoutes = require('./routes/formRoutes');
 const formInscripcionCursoRoutes = require('./routes/formInscripcionCursoRoutes');
-const path = require("path");
+
 const app = express();
 
 // Conexión a la base de datos
@@ -27,12 +27,10 @@ const swaggerOptions = {
     },
     servers: [
       {
-        url: 'http://localhost:5000/',
-        description: 'Servidor Local'     
-      },
-      {
-        url: 'https://ivbccserve.vercel.app/',
-        description: 'Servidor en Producción'
+        url: process.env.NODE_ENV === "production"
+          ? 'https://ivbccserve.vercel.app'
+          : 'http://localhost:5000',
+        description: 'Servidor Principal'
       }
     ],
   },
@@ -40,23 +38,19 @@ const swaggerOptions = {
 };
 
 const swaggerDocs = swaggerJsdoc(swaggerOptions);
-app.use('/api-docs', (req, res, next) => {
-  req.baseUrl = '/api-docs';
-  next();
-}, swaggerUi.serve, swaggerUi.setup(swaggerDocs));
-/* app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs)); */
-app.use('/api-docs/', express.static(path.join(__dirname, 'node_modules/swagger-ui-dist')));
-// Rutas
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs, { explorer: true }));
+
+// Rutas de la API
 app.use('/api/forms', formRoutes);
 app.use('/api/inscripcioncurso', formInscripcionCursoRoutes);
 
+// Iniciar servidor solo en desarrollo
+const port = process.env.PORT || 5000;
 if (process.env.NODE_ENV !== 'production') {
-  const port = process.env.PORT || 5000;
   app.listen(port, () => {
     console.log(`Servidor escuchando en el puerto ${port}...`);
     console.log(`Swagger en http://localhost:${port}/api-docs`);
   });
 }
-
 
 module.exports = app;
