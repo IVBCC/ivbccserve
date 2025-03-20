@@ -6,7 +6,7 @@ const swaggerJsdoc = require('swagger-jsdoc');
 const connection = require('./db');
 const formRoutes = require('./routes/formRoutes');
 const formInscripcionCursoRoutes = require('./routes/formInscripcionCursoRoutes');
-
+const path = require('path');
 const app = express();
 
 // Conexión a la base de datos
@@ -39,6 +39,7 @@ const swaggerOptions = {
 
 const swaggerDocs = swaggerJsdoc(swaggerOptions);
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs, { explorer: true }));
+app.use('/api-docs/', express.static(path.join(__dirname, 'node_modules/swagger-ui-dist')));
 
 // Rutas de la API
 app.use('/api/forms', formRoutes);
