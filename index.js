@@ -44,13 +44,11 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs, { explorer: t
 app.use('/api/forms', formRoutes);
 app.use('/api/inscripcioncurso', formInscripcionCursoRoutes);
 
-// Iniciar servidor solo en desarrollo
+// Iniciar servidor en Vercel y local
 const port = process.env.PORT || 5000;
-if (process.env.NODE_ENV !== 'production') {
-  app.listen(port, () => {
-    console.log(`Servidor escuchando en el puerto ${port}...`);
-    console.log(`Swagger en http://localhost:${port}/api-docs`);
-  });
-}
+app.listen(port, () => {
+  console.log(`Servidor escuchando en el puerto ${port}...`);
+  console.log(`Swagger en https://ivbccserve.vercel.app/api-docs`);
+});
 
 module.exports = app;
