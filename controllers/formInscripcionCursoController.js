@@ -24,3 +24,45 @@ exports.getFormInscripcionCurso = async (req,res) =>{
         res.status(500).json({ error: "Error del servidor al obtener formularios" });
     }
 }
+
+exports.updateFormInscripcionCurso = async (req, res) => {
+    try {
+        const { id } = req.params;
+        const { curso, nombreCompleto, correo, telefono, sexo, edad, comentario } = req.body;
+
+        const updatedForm = await FormInscripcionCurso.findByIdAndUpdate(
+            id,
+            { curso, nombreCompleto, correo, telefono, sexo, edad, comentario },
+            { new: true, runValidators: true }
+        );
+
+        if (!updatedForm) {
+            return res.status(404).json({ error: "Formulario no encontrado" });
+        }
+
+        res.status(200).json({ message: "Formulario actualizado correctamente", updatedForm });
+    } catch (error) {
+        console.error("Error al actualizar el formulario:", error);
+        res.status(500).json({ error: "Error del servidor al actualizar el formulario" });
+
+        if (error.name === "ValidationError") {
+            return res.status(400).json({ error: error.message });
+        }
+    }
+};
+
+exports.deleteFormInscripcionCurso = async (req, res) => {
+    try {
+        const { id } = req.params;
+        const deletedForm = await FormInscripcionCurso.findByIdAndDelete(id);
+
+        if (!deletedForm) {
+            return res.status(404).json({ error: "Formulario no encontrado" });
+        }
+
+        res.status(200).json({ message: "Formulario eliminado correctamente" });
+    } catch (error) {
+        console.error("Error al eliminar el formulario:", error);
+        res.status(500).json({ error: "Error del servidor al eliminar el formulario" });
+    }
+};

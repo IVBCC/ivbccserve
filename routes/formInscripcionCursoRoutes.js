@@ -22,7 +22,7 @@ const FormInscripcionCursoController = require('../controllers/formInscripcionCu
  *               correo:
  *                 type: string
  *               telefono:
- *                 type: integer
+ *                 type: string
  *               sexo:
  *                 type: string
  *               edad:
@@ -71,7 +71,7 @@ router.post('/', FormInscripcionCursoController.createFormInscripcionCurso);
  *                    correo:
  *                      type: string
  *                    telefono:
- *                      type: integer
+ *                      type: string
  *                    sexo:
  *                      type: string
  *                    edad:
@@ -83,4 +83,5 @@ router.post('/', FormInscripcionCursoController.createFormInscripcionCurso);
  */
 router.get('/', FormInscripcionCursoController.getFormInscripcionCurso);
 
+router.put('')
 module.exports = router;
