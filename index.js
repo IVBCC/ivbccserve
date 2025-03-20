@@ -26,9 +26,13 @@ const swaggerOptions = {
     },
     servers: [
       {
-        // url: 'http://localhost:5000',
-        url: 'https://ivbccserve.vercel.app/',
+        url: 'http://localhost:5000',
+        description: 'Servidor Local'     
       },
+      {
+        url: 'https://ivbccserve.vercel.app/',
+        description: 'Servidor en Producción'
+      }
     ],
   },
   apis: ['./routes/*.js'], // Documentar rutas
