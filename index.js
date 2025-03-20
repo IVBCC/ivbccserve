@@ -26,7 +26,7 @@ const swaggerOptions = {
     },
     servers: [
       {
-        url: 'http://localhost:5000',
+        url: 'http://localhost:5000/',
         description: 'Servidor Local'     
       },
       {
@@ -39,17 +39,23 @@ const swaggerOptions = {
 };
 
 const swaggerDocs = swaggerJsdoc(swaggerOptions);
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
+app.use('/api-docs', (req, res, next) => {
+  req.baseUrl = '/api-docs';
+  next();
+}, swaggerUi.serve, swaggerUi.setup(swaggerDocs));
+/* app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs)); */
 
 // Rutas
 app.use('/api/forms', formRoutes);
 app.use('/api/inscripcioncurso', formInscripcionCursoRoutes);
 
-const port = process.env.PORT || 5000;
-app.listen(port, () => {
-  console.log(`Servidor escuchando en el puerto ${port}...`);
-  console.log("Swagger en http://localhost:5000/api-docs");
-});
+if (process.env.NODE_ENV !== 'production') {
+  const port = process.env.PORT || 5000;
+  app.listen(port, () => {
+    console.log(`Servidor escuchando en el puerto ${port}...`);
+    console.log(`Swagger en http://localhost:${port}/api-docs`);
+  });
+}
 
 
 module.exports = app;
