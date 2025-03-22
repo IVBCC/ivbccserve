@@ -64,12 +64,12 @@ exports.getByCelularFormInscripcionCurso = async (req, res) => {
 
 exports.updateFormInscripcionCurso = async (req, res) => {
     try {
-        const { id } = req.params;
-        const { curso, nombreCompleto, correo, telefono, sexo, edad, comentario } = req.body;
+        const { telefono } = req.params;
+        const { curso, nombreCompleto, correo, sexo, edad, comentario } = req.body;
 
-        const updatedForm = await FormInscripcionCurso.findByIdAndUpdate(
-            id,
-            { curso, nombreCompleto, correo, telefono, sexo, edad, comentario },
+        const updatedForm = await FormInscripcionCurso.findOneAndUpdate(
+            { telefono },
+            { curso, nombreCompleto, correo, sexo, edad, comentario },
             { new: true, runValidators: true }
         );
 

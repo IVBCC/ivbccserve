@@ -104,7 +104,7 @@ router.get('/', FormInscripcionCursoController.getFormInscripcionCurso);
  *       500:
  *         description: Error del servidor
  */
-router.get('/:id',FormInscripcionCursoController.getByIdFormInscripcionCurso);
+router.get('/:id', FormInscripcionCursoController.getByIdFormInscripcionCurso);
 
 /**
  * @swagger
@@ -151,21 +151,21 @@ router.get('/:id',FormInscripcionCursoController.getByIdFormInscripcionCurso);
  *       500:
  *         description: Error del servidor.
  */
-router.get('/telefono/:telefono',FormInscripcionCursoController.getByCelularFormInscripcionCurso);
+router.get('/telefono/:telefono', FormInscripcionCursoController.getByCelularFormInscripcionCurso);
 
 /**
  * @swagger
- * /api/inscripcioncurso/{id}:
+ * /api/inscripcioncurso/{telefono}:
  *   put:
  *     summary: Actualizar un formulario de inscripción
  *     tags: [Formulario curso]
  *     parameters:
  *       - in: path
- *         name: id
+ *         name: telefono
  *         required: true
  *         schema:
  *           type: string
- *         description: ID del formulario a actualizar
+ *         description: Telefono del formulario a actualizar
  *     requestBody:
  *       required: true
  *       content:
@@ -179,8 +179,6 @@ router.get('/telefono/:telefono',FormInscripcionCursoController.getByCelularForm
  *                 type: string
  *               correo:
  *                 type: string
- *               telefono:
- *                 type: string
  *               sexo:
  *                 type: string
  *               edad:
@@ -191,7 +189,6 @@ router.get('/telefono/:telefono',FormInscripcionCursoController.getByCelularForm
  *               curso: "Nuevo Curso"
  *               nombreCompleto: "Juan Pérez"
  *               correo: "juanperez@example.com"
- *               telefono: "3216549870"
  *               sexo: "M"
  *               edad: 28
  *               comentario: "Actualización de datos"
@@ -203,7 +200,7 @@ router.get('/telefono/:telefono',FormInscripcionCursoController.getByCelularForm
  *       500:
  *         description: Error del servidor
  */
-router.put('/:id', FormInscripcionCursoController.updateFormInscripcionCurso);
+router.put('/:telefono', FormInscripcionCursoController.updateFormInscripcionCurso);
 
 /**
  * @swagger
