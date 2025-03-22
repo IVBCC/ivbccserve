@@ -117,4 +117,46 @@ router.get('/', FormController.getForm);
  */
 router.get("/:cedula", FormController.getFormByCedula);
 
+/**
+ * @swagger
+ * /api/forms/{cedula}:
+ *   put:
+ *     summary: Actualizar un formulario por cédula
+ *     tags: [Formulario ministerio]
+ *     parameters:
+ *       - in: path
+ *         name: cedula
+ *         required: true
+ *         schema:
+ *           type: string
+ *         description: Cédula del formulario a actualizar
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               nombreCompleto:
+ *                 type: string
+ *               edad:
+ *                 type: integer
+ *               celular:
+ *                 type: string
+ *               ministerio:
+ *                 type: string
+ *             example:
+ *               nombreCompleto: "Carlos Gómez"
+ *               edad: 35
+ *               celular: "3001234567"
+ *               ministerio: "Música"
+ *     responses:
+ *       200:
+ *         description: Formulario actualizado correctamente
+ *       404:
+ *         description: Formulario no encontrado
+ *       500:
+ *         description: Error del servidor
+ */
+router.put('/:cedula', FormController.updateFormByCc);
 module.exports = router;

@@ -21,7 +21,7 @@ exports.getForm = async (req, res) => {
     }
 };
 
-exports.getFormByCedula = async (req,res)=>{
+exports.getFormByCedula = async (req, res) => {
     try {
         const { cedula } = req.params;
         const form = await Form.findOne({ cedula });
@@ -31,6 +31,27 @@ exports.getFormByCedula = async (req,res)=>{
         }
 
         res.status(200).json(form);
+    } catch (error) {
+        console.error("Error al obtener el formulario:", error);
+        res.status(500).json({ error: "Error del servidor al obtener el formulario" });
+    }
+}
+
+exports.updateFormByCc = async (req, res) => {
+    try {
+        const { cedula } = req.params;
+        const { nombreCompleto, edad, celular, ministerio } = req.body;
+
+        const traerForm = await Form.findOneAndUpdate(
+            { cedula },
+            { nombreCompleto, edad, celular, ministerio },
+            { new: true, runValidators: true }
+        );
+
+        if (!traerForm) {
+            return res.status(404).json({ error: "Formulario no encontrado con esa cédula" });
+        }
+        res.status(200).json({ message: "Formulario actualizado correctamente", traerForm });
     } catch (error) {
         console.error("Error al obtener el formulario:", error);
         res.status(500).json({ error: "Error del servidor al obtener el formulario" });
