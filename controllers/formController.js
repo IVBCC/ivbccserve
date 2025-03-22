@@ -57,3 +57,18 @@ exports.updateFormByCc = async (req, res) => {
         res.status(500).json({ error: "Error del servidor al obtener el formulario" });
     }
 }
+
+exports.deleteFormByCc = async(req,res)=>{
+    try{
+        const {cedula} = req.params;
+        const formEncontrado = await Form.findOneAndDelete({cedula});
+        if (!formEncontrado) {
+            return res.status(404).json({ error: "Formulario no encontrado" });
+        }
+
+        res.status(200).json({ message: "Formulario eliminado correctamente" });
+    }catch (error){
+        console.error("Error al eliminar el formulario:", error);
+        res.status(500).json({ error: "Error del servidor al eliminar el formulario" });
+    }
+}

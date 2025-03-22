@@ -159,4 +159,27 @@ router.get("/:cedula", FormController.getFormByCedula);
  *         description: Error del servidor
  */
 router.put('/:cedula', FormController.updateFormByCc);
+
+/**
+ * @swagger
+ * /api/forms/{cedula}:
+ *   delete:
+ *     summary: Eliminar un formulario de inscripción
+ *     tags: [Formulario ministerio]
+ *     parameters:
+ *       - in: path
+ *         name: cedula
+ *         required: true
+ *         schema:
+ *           type: string
+ *         description: Cedula del formulario a eliminar
+ *     responses:
+ *       200:
+ *         description: Formulario eliminado correctamente
+ *       404:
+ *         description: Formulario no encontrado
+ *       500:
+ *         description: Error del servidor
+ */
+router.delete('/:cedula', FormController.deleteFormByCc);
 module.exports = router;
