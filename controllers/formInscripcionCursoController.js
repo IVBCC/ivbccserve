@@ -39,6 +39,29 @@ exports.getByIdFormInscripcionCurso = async (req, res) => {
     }
 }
 
+exports.getByCelularFormInscripcionCurso = async (req, res) => {
+    try {
+        const { telefono } = req.params;
+
+        // Asegurar que el parámetro es una cadena de texto
+        if (!telefono || typeof telefono !== "string") {
+            return res.status(400).json({ error: "El teléfono proporcionado no es válido" });
+        }
+
+        // Buscar el formulario con el teléfono exacto
+        const form = await FormInscripcionCurso.findOne({ telefono });
+
+        if (!form) {
+            return res.status(404).json({ error: "No se encontró un formulario con ese número de teléfono" });
+        }
+
+        res.status(200).json(form);
+    } catch (error) {
+        console.error("Error al obtener el formulario por teléfono:", error);
+        res.status(500).json({ error: "Error del servidor al obtener el formulario" });
+    }
+}
+
 exports.updateFormInscripcionCurso = async (req, res) => {
     try {
         const { id } = req.params;

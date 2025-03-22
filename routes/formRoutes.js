@@ -74,4 +74,47 @@ router.post('/', FormController.createForm);
  */
 router.get('/', FormController.getForm);
 
+/**
+ * @swagger
+ * /api/forms/{cedula}:
+ *   get:
+ *     summary: Obtener un formulario por cédula
+ *     description: Busca un formulario en la base de datos usando la cédula del usuario.
+ *     tags: [Formulario ministerio]
+ *     parameters:
+ *       - in: path
+ *         name: cedula
+ *         required: true
+ *         schema:
+ *           type: string
+ *         description: Cédula del usuario a buscar.
+ *     responses:
+ *       200:
+ *         description: Formulario encontrado
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 _id:
+ *                   type: string
+ *                   description: ID del formulario
+ *                 cedula:
+ *                   type: string
+ *                   description: Cédula del usuario
+ *                 nombreCompleto:
+ *                   type: string
+ *                 edad:
+ *                   type: number
+ *                 celular:
+ *                   type: string
+ *                 ministerio:
+ *                   type: string
+ *       404:
+ *         description: No se encontró el formulario con esa cédula.
+ *       500:
+ *         description: Error del servidor.
+ */
+router.get("/:cedula", FormController.getFormByCedula);
+
 module.exports = router;

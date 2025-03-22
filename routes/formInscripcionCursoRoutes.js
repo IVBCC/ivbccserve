@@ -105,6 +105,54 @@ router.get('/', FormInscripcionCursoController.getFormInscripcionCurso);
  *         description: Error del servidor
  */
 router.get('/:id',FormInscripcionCursoController.getByIdFormInscripcionCurso);
+
+/**
+ * @swagger
+ * /api/inscripcioncurso/telefono/{telefono}:
+ *   get:
+ *     summary: Obtener un formulario por teléfono
+ *     description: Busca un formulario en la base de datos usando el número de teléfono.
+ *     tags: [Formulario curso]
+ *     parameters:
+ *       - in: path
+ *         name: telefono
+ *         required: true
+ *         schema:
+ *           type: string
+ *         description: Número de teléfono a buscar.
+ *     responses:
+ *       200:
+ *         description: Formulario encontrado
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 _id:
+ *                   type: string
+ *                   description: ID del formulario
+ *                 curso:
+ *                   type: string
+ *                   description: Nombre del curso
+ *                 nombreCompleto:
+ *                   type: string
+ *                 correo:
+ *                   type: string
+ *                 telefono:
+ *                   type: string
+ *                 sexo:
+ *                   type: string
+ *                 edad:
+ *                   type: number
+ *                 comentario:
+ *                   type: string
+ *       404:
+ *         description: No se encontró el formulario con ese número de teléfono.
+ *       500:
+ *         description: Error del servidor.
+ */
+router.get('/telefono/:telefono',FormInscripcionCursoController.getByCelularFormInscripcionCurso);
+
 /**
  * @swagger
  * /api/inscripcioncurso/{id}:

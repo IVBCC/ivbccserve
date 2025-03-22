@@ -44,6 +44,7 @@ app.use('/api-docs/', express.static(path.join(__dirname, 'node_modules/swagger-
 // Rutas de la API
 app.use('/api/forms', formRoutes);
 app.use('/api/inscripcioncurso', formInscripcionCursoRoutes);
+app.use('/api/inscripcioncurso/telefono', formInscripcionCursoRoutes);
 
 // Iniciar servidor en Vercel y local
 const port = process.env.PORT || 5000;

@@ -20,3 +20,19 @@ exports.getForm = async (req, res) => {
         res.status(500).json({ error: "Error del servidor al obtener formularios" });
     }
 };
+
+exports.getFormByCedula = async (req,res)=>{
+    try {
+        const { cedula } = req.params;
+        const form = await Form.findOne({ cedula });
+
+        if (!form) {
+            return res.status(404).json({ error: "No se encontró el formulario con esa cédula" });
+        }
+
+        res.status(200).json(form);
+    } catch (error) {
+        console.error("Error al obtener el formulario:", error);
+        res.status(500).json({ error: "Error del servidor al obtener el formulario" });
+    }
+}
