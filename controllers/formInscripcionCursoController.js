@@ -1,3 +1,4 @@
+const req = require('express/lib/request');
 const FormInscripcionCurso = require('../models/FormInscripcionCurso');
 
 exports.createFormInscripcionCurso = async (req, res) => {
@@ -103,3 +104,18 @@ exports.deleteFormInscripcionCurso = async (req, res) => {
         res.status(500).json({ error: "Error del servidor al eliminar el formulario" });
     }
 };
+
+exports.deteleFormByTelefono = async(req,res)=>{
+    try{
+        const {telefono}=req.params;
+        const form = await FormInscripcionCurso.findOneAndDelete({telefono});
+        if (!form) {
+            return res.status(404).json({ error: "Formulario no encontrado" });
+        }
+
+        res.status(200).json({ message: "Formulario eliminado correctamente" });
+    }catch (error) {
+        console.error("Error al eliminar el formulario:", error);
+        res.status(500).json({ error: "Error del servidor al eliminar el formulario" });
+    }
+}

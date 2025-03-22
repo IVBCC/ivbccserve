@@ -225,4 +225,26 @@ router.put('/:telefono', FormInscripcionCursoController.updateFormInscripcionCur
  */
 router.delete('/:id', FormInscripcionCursoController.deleteFormInscripcionCurso);
 
+/**
+ * @swagger
+ * /api/inscripcioncurso/telefono/{telefono}:
+ *   delete:
+ *     summary: Eliminar un formulario de inscripción
+ *     tags: [Formulario curso]
+ *     parameters:
+ *       - in: path
+ *         name: telefono
+ *         required: true
+ *         schema:
+ *           type: string
+ *         description: Telefono del formulario a eliminar
+ *     responses:
+ *       200:
+ *         description: Formulario eliminado correctamente
+ *       404:
+ *         description: Formulario no encontrado
+ *       500:
+ *         description: Error del servidor
+ */
+router.delete('/telefono/:telefono',FormInscripcionCursoController.deteleFormByTelefono);
 module.exports = router;
