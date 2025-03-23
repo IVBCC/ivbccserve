@@ -6,6 +6,7 @@ const swaggerJsdoc = require('swagger-jsdoc');
 const connection = require('./db');
 const formRoutes = require('./routes/formRoutes');
 const formInscripcionCursoRoutes = require('./routes/formInscripcionCursoRoutes');
+const formContacto = require('./routes/formContactoRouter');
 const path = require('path');
 const app = express();
 
@@ -45,6 +46,7 @@ app.use('/api-docs/', express.static(path.join(__dirname, 'node_modules/swagger-
 app.use('/api/forms', formRoutes);
 app.use('/api/inscripcioncurso', formInscripcionCursoRoutes);
 app.use('/api/inscripcioncurso/telefono', formInscripcionCursoRoutes);
+app.use('/api',formContacto);
 
 // Iniciar servidor en Vercel y local
 const port = process.env.PORT || 5000;
