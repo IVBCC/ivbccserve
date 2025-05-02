@@ -1,0 +1,106 @@
+[
+    {
+      "nombre": "Región Central",
+      "iglesias": [
+        { "nombre": "Iglesia Pasión Por Jesus Cruzada Cristiana (Duitama)", "coords": [5.818398860228768, -73.02815087539938] },
+        { "nombre": "Iglesia Pasión Por Jesus Cruzada Cristiana (Duitama)", "coords": [5.7779930064752785, -73.11571432127086] },
+        { "nombre": "Iglesia Pasión Por Jesus Cruzada Cristiana (Duitama)", "coords": [5.71258168542058, -72.93203959058542] },
+        { "nombre": "Iglesia Pasión Por Jesus Cruzada Cristiana (Duitama)", "coords": [5.365018, -73.521003] },
+        { "nombre": "Iglesia Pasión Por Jesus Cruzada Cristiana (Duitama)", "coords": [5.318307174610681, -73.39811025777941] },
+        { "nombre": "Iglesia Centro De Transformacion Integral Cruzada Cristiana", "coords": [5.282397260517442, -73.16973656175209] },
+        { "nombre": "Iglesia Centro De Transformacion Integral Cruzada Cristiana", "coords": [5.618033387997598, -73.8134692560577] },
+        { "nombre": "Iglesia Centro De Transformacion Integral Cruzada Cristiana", "coords": [5.613381732093275, -73.82471263490007] },
+        { "nombre": "Iglesia Centro De Transformacion Integral Cruzada Cristiana", "coords": [5.604381548802258, -73.82063954203284] },
+        { "nombre": "Iglesia Centro De Transformacion Integral Cruzada Cristiana", "coords": [5.603844, -73.821728] },
+        { "nombre": "Iglesia Centro De Transformacion Integral Cruzada Cristiana", "coords": [5.6036436753521475, -73.82652685082648] },
+        { "nombre": "Iglesia Centro De Transformacion Integral Cruzada Cristiana", "coords": [5.616964, -73.831175] },
+        { "nombre": "Iglesia Rios de Vida Cruzada Cristiana", "coords": [5.655668620109692, -73.97991730592865] },
+        { "nombre": "Iglesia Rios de Vida Cruzada Cristiana", "coords": [5.544999888480961, -74.00499151942226] },
+        { "nombre": "Iglesia Rios de Vida Cruzada Cristiana", "coords": [5.655259133196273, -73.97915926360008] },
+        { "nombre": "Iglesia Rios de Vida Cruzada Cristiana", "coords": [5.544125, -74.00454] },
+        { "nombre": "Iglesia Rios de Vida Cruzada Cristiana", "coords": [5.544125, -74.00454] },
+        { "nombre": "Iglesia Rios de Vida Cruzada Cristiana", "coords": [5.658287894421885, -74.06491974835934] }
+      ]
+    },
+    {
+      "nombre": "Región Atlántico",
+      "iglesias": [
+        { "nombre": "Iglesia Barranquilla", "coords": [10.9685, -74.7813] },
+        { "nombre": "Iglesia Cartagena", "coords": [10.391, -75.4794] }
+      ]
+    },
+    {
+      "nombre": "Región Andina Sur",
+      "iglesias": [
+        { "nombre": "IGLESIA JESUCRISTO ES EL SEÑOR CRUZADA CRISTIANA", "coords": [4.437112, -75.210066] },
+        { "nombre": "Iglesia Dios en nosotros Cruzada Cristiana", "coords": [4.432548861885031, -75.19968667236968] },
+        { "nombre": "IGLESIA CRUZADA CRISTIANA PUERTA DEL CIELO", "coords": [4.433273665363472, -75.2430858598657] },
+        { "nombre": "IGLESIA CRUZADA CRISTIANA CAMINANDO EN LUZ", "coords": [4.7855645896702566, -74.76506300593309] },
+        { "nombre": "IGLESIA CRUZADA CRISTIANA", "coords": [2.3898792876992836, -75.88932804826689] },
+        { "nombre": "Iglesia EDÉN Cruzada Cristiana", "coords": [3.7199803084413334, -75.49436676360817] },
+        { "nombre": "IGLESIA CRUZADA CRISTIANA", "coords": [4.031429041759085, -74.96993600593579] },
+        { "nombre": "IGLESIA SENDEROS DE PAZ CRUZADA CRISTIANA", "coords": [4.7167764303339705, -74.93012702127622] },
+        { "nombre": "Iglesia La Trompeta Profética Cruzada Cristiana", "coords": [5.155236143925228, -75.03532337310017] },
+        { "nombre": "IGLESIA CRUZADA CRISTIANA", "coords": [4.148024813441027, -74.88637446360696] },
+        { "nombre": "IGLESIA CRUZADA CRISTIANA", "coords": [5.197835889167618, -74.8896588059311] },
+        { "nombre": "IGLESIA CRUZADA CRISTIANA RIOS DE AGUA VIVA", "coords": [4.240202884107424, -75.23922602127799] },
+        { "nombre": "IGLESIA CRUZADA CRISTIANA", "coords": [5.240068677130696, -75.00894002623579] },
+        { "nombre": "IGLESIA LIRIO DE LOS VALLES CRUZADA CRISTIANA", "coords": [4.012296351889686, -75.60591724826449] },
+        { "nombre": "IGLESIA CRUZADA CRISTIANA", "coords": [4.921557780692564, -75.06527827709681] },
+        { "nombre": "IGLESIA CRUZADA CRISTIANA", "coords": [4.714882661469324, -75.09707501335545] },
+        { "nombre": "IGLESIA CRUZADA CRISTIANA", "coords": [5.079968, -75.179281] },
+        { "nombre": "IGLESIA CRUZADA CRISTIANA", "coords": [1.909903701274656, -75.15759552589525] },
+        { "nombre": "Iglesia Plenitud en Su presencia", "coords": [2.941482, -75.267809] },
+        { "nombre": "IGLESIA CRUZADA CRISTIANA CAMPOALEGRE", "coords": [2.685034031269629, -75.32456949506273] },
+        { "nombre": "IGLESIA LA VOZ DE DIOS \"Un Lugar de Revelaciony Vida\" CRUZADA CRISTIANA", "coords": [1.837675, -76.044217] },
+        { "nombre": "IGLESIA LA VOZ DE DIOS \"Un Lugar de Revelaciony Vida\" CRUZADA CRISTIANA", "coords": [2.1993945583196948, -75.63329804826694] },
+        { "nombre": "IGLESIA LA VOZ DE DIOS \"Un Lugar de Revelaciony Vida\" CRUZADA CRISTIANA", "coords": [2.3892361073111243, -75.89428982128122] },
+        { "nombre": "IGLESIA LA VOZ DE DIOS \"Un Lugar de Revelaciony Vida\" CRUZADA CRISTIANA", "coords": [0.961904, -76.409335] },
+        { "nombre": "IGLESIA LA VOZ DE DIOS \"Un Lugar de Revelaciony Vida\" CRUZADA CRISTIANA", "coords": [1.977907, -75.933421] },
+        { "nombre": "IGLESIA CRUZADA CRISTIANA LA VOZ DE DIOS EN ISNOS", "coords": [1.9315452110331839, -76.21720000395011] },
+        { "nombre": "RED DE SALVACIÓN IGLESIA CRUZADA CRISTIANA", "coords": [2.120303343422743, -74.76921711826351] },
+        { "nombre": "IGLESIA CASA DE DIOS CRUZADA CRISTIANA", "coords": [1.6099497830361162, -75.60554979017948] },
+        { "nombre": "IGLESIA CIUDADELA GLORIA DE DIOS CRUZADA CRISTIANA", "coords": [1.6290503597908057, -75.60690450142036] },
+        { "nombre": "Iglesia EDEN Cruzada Cristiana.", "coords": [3.9149798376101224, -75.4770067916951] },
+        { "nombre": "Iglesia EDEN Cruzada Cristiana Chaparral", "coords": [3.7203254705146804, -75.49436095392534] },
+        { "nombre": "Iglesia EDÉN Cruzada Cristiana", "coords": [3.9358414841793903, -75.22062088272943] },
+        { "nombre": "Iglesia EDÉN Cruzada Cristiana", "coords": [3.7986133623437803, -75.19466244040669] }
+      ]
+    },
+    {
+      "nombre": "Región Llanos",
+      "iglesias": [
+        { "nombre": "Iglesia Barranquilla", "coords": [10.9685, -74.7813] },
+        { "nombre": "Iglesia Cartagena", "coords": [10.391, -75.4794] }
+      ]
+    },
+    {
+      "nombre": "Región Noroccidente",
+      "iglesias": [
+        { "nombre": "Iglesia Barranquilla", "coords": [10.9685, -74.7813] },
+        { "nombre": "Iglesia Cartagena", "coords": [10.391, -75.4794] }
+      ]
+    },
+    {
+      "nombre": "Región Nororiente",
+      "iglesias": [
+        { "nombre": "Iglesia Barranquilla", "coords": [10.9685, -74.7813] },
+        { "nombre": "Iglesia Cartagena", "coords": [10.391, -75.4794] }
+      ]
+    },
+    {
+      "nombre": "Región Occidente",
+      "iglesias": [
+        { "nombre": "Iglesia Barranquilla", "coords": [10.9685, -74.7813] },
+        { "nombre": "Iglesia Cartagena", "coords": [10.391, -75.4794] }
+      ]
+    },
+    {
+      "nombre": "Región Pacífico",
+      "iglesias": [
+        { "nombre": "Iglesia Barranquilla", "coords": [10.9685, -74.7813] },
+        { "nombre": "Iglesia Cartagena", "coords": [10.391, -75.4794] }
+      ]
+    }
+  ]
+  

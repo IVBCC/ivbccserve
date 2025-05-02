@@ -7,6 +7,7 @@ const connection = require('./db');
 const formRoutes = require('./routes/formRoutes');
 const formInscripcionCursoRoutes = require('./routes/formInscripcionCursoRoutes');
 const formContacto = require('./routes/formContactoRouter');
+const iglesiasapi = require('./routes/iglesiasRouter');
 const path = require('path');
 const app = express();
 
@@ -47,6 +48,7 @@ app.use('/api/forms', formRoutes);
 app.use('/api/inscripcioncurso', formInscripcionCursoRoutes);
 app.use('/api/inscripcioncurso/telefono', formInscripcionCursoRoutes);
 app.use('/api',formContacto);
+app.use('/api/iglesias', iglesiasapi);
 
 // Iniciar servidor en Vercel y local
 const port = process.env.PORT || 5000;
