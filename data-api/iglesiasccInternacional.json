@@ -1,0 +1,30 @@
+[
+    {
+        "nombre":"España",
+        "iglesias":[
+            { "nombre": "LUZ A LAS NACIONES", "coords": [40.386257947459086, -3.736391728544522] },
+            { "nombre": "Iglesia ICC del Dios vivo", "coords": [42.88333256688364, -8.533597207586153] }            
+        ]
+    },
+    {
+        "nombre":"Miami",
+        "iglesias":[
+            { "nombre": "BET-EL CHURCH", "coords": [25.655288181750738, -80.409123308569] }                         
+        ]
+    },{
+        "nombre":"Ecuador",
+        "iglesias":[
+            { "nombre": "JESUCRISTO ES EL SEÑOR", "coords": [-2.246020089451154, -79.8907934223404] },
+            { "nombre": "EBENEZER", "coords": [-2.2485311542134485, -79.89260899736321] },
+            { "nombre": "CENTRO INTERNACIONAL DE ADORACION", "coords": [0.8140420663786377, -77.71604212613892] },
+            { "nombre": "PALABRA Y AMOR", "coords": [-2.1221409442940105, -79.91178756310059] },
+            { "nombre": "RESTAURACION FAMILIAR", "coords": [-2.240258589930901, -79.92203022088582] },
+            { "nombre": "EMMANUEL", "coords": [-2.0027876192169547, -79.48432356750939] },
+            { "nombre": "SENDAS DE JUSTICIA", "coords": [-2.110136, -79.990718] },
+            { "nombre": "CENTRO CRISTIANO DE AVIVAMIENTO INTERNACIONAL", "coords": [-0.2231164261437611, -78.514413176788] },
+            { "nombre": "COSECHA DE AVIVAMIENTO SONORO ", "coords": [-3.2585724964176577, -79.95897076042661] },
+            { "nombre": "ICC", "coords": [1.2695034842914246, -78.8436845680597] },
+            { "nombre": "ICC", "coords": [-2.1258917743433074, -79.92270341804699] } 
+        ]
+    }
+]
