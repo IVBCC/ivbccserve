@@ -15,4 +15,38 @@ router.get('/', (req, res) => {
     });
 });
 
+router.get('/pdf/colombia', (req, res) => {
+    const pdfDir = path.join(process.cwd(), 'pdf', 'colombia');
+    fs.readdir(pdfDir, (err, files) => {
+      if (err) {
+        return res.status(500).json({ error: 'No se pudieron listar los PDFs' });
+      }
+  
+      const pdfs = files.map((file) => ({
+        nombre: file.replace('.pdf', '').replace(/-/g, ' ').toUpperCase(),
+        archivo: file,
+        url: `/pdf/colombia/${file}`
+      }));
+  
+      res.json(pdfs);
+    });
+  });
+  
+  router.get('/pdf/internacional', (req, res) => {
+    const pdfDir = path.join(process.cwd(), 'pdf', 'internacional');
+    fs.readdir(pdfDir, (err, files) => {
+      if (err) {
+        return res.status(500).json({ error: 'No se pudieron listar los PDFs' });
+      }
+  
+      const pdfs = files.map((file) => ({
+        nombre: file.replace('.pdf', '').replace(/-/g, ' ').toUpperCase(),
+        archivo: file,
+        url: `/pdf/internacional/${file}`
+      }));
+  
+      res.json(pdfs);
+    });
+  });  
+
 module.exports = router;

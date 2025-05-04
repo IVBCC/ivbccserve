@@ -43,7 +43,7 @@ const swaggerOptions = {
 const swaggerDocs = swaggerJsdoc(swaggerOptions);
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs, { explorer: true }));
 app.use('/api-docs/', express.static(path.join(__dirname, 'node_modules/swagger-ui-dist')));
-
+app.use('/pdf', express.static(path.join(__dirname, 'pdf')));
 // Rutas de la API
 app.use('/api/forms', formRoutes);
 app.use('/api/inscripcioncurso', formInscripcionCursoRoutes);
